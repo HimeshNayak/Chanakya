@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -14,11 +15,26 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">CHANAKYA</a></h1>
-						<nav>
+						<nav style = "margin-top:0;">					
+							<a> 
+								<div class="dropdown">
+									<button>Select the course</button>
+									<div class="dropdown-content">
+										<a href="#one">JEE</a>
+										<a href="#two">Class 11th</a>
+										<a href="#three">Class 12th</a>
+										<form>
+										<input type = "text" name = "otherCourse" placeholder = "Any other course?" />
+										<button type = "submit"><i class = "fa fa-search"></i></button>
+										<button type = "reset"><i class = "fa fa-recycle"></i></button>
+										<form>
+									</div>
+								</div>
+							</a>
+							<a><button>Login</button></a>
 							<a href="#menu">Menu</a>
 						</nav>
-					</header>
+					</header>	
 
 				<!-- Menu -->
 					<nav id="menu">
@@ -28,10 +44,6 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="generic.html">About Us</a></li>
 								<li><a href="elements.html">Features</a></li>
-								<li><a href="#">
-									<input type="text" name="search" placeholder="Find a course">
-									<button>Search</button>
-								</a></li>
 								<li><a href="#">Contact Us</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
@@ -41,7 +53,6 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
 							<h2>CHANAKYA</h2>
 							<p>LEARN AT HOME- THE FUTURE LEARNING PLATFORM FOR THIS WORLD</p>
 						</div>
@@ -160,7 +171,9 @@
 								<li class="icon brands fa-instagram"><a href="#">instagram</a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy;Debuggers: Debugging Society <br> All rights reserved.</li><li>Design: Debuggers</li>
+								<li>&copy; Debuggers: Debugging Society </li>
+								<li>All rights reserved.</li>
+								<li>Design: Debuggers</li>
 							</ul>
 						</div>
 					</section>
@@ -174,6 +187,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			
 	</body>
 </html>

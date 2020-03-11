@@ -7,7 +7,7 @@ Today's learners want relevant, mobile, self-paced, and personalized content. Th
 *If the Link Doesn't Work then find the pdf attached.*
 
 ### Pdf 
-[Link to PDF Document](https://github.com/HimeshNayak/Debuggershm20/hackmsit2020_chanakya.pdf)
+[Link to PDF Document](https://github.com/HimeshNayak/Debuggershm20/blob/master/hackmsit2020_chanakya.pdf)
 
 ### About
 Chanakya is a web/app which will help the user to enhance his knowledge through video lectures by the best teachers from institutions round the globe. To make learning interesting the web/app also provides the user with simulations wherein the student can witness the theory being converted into practical. To keep a track of your learning, there are mock tests. We have aimed to make the web/app in such a manner that it caters to all the needs of the user and helps him to become the master of knowledge.

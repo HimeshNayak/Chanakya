@@ -1,4 +1,7 @@
 # Chanakya 
+
+![Banner](https://github.com/HimeshNayak/Chanakya/blob/master/images/bannerPic.png)
+
 ## Theme : E-Learning
 Today's learners want relevant, mobile, self-paced, and personalized content. This need is fulfilled with E-learning. Due to the wide set of benefits, it gives to students, eLearning has become quite popular and appreciated among students all over the world.
 
@@ -26,8 +29,7 @@ Chanakya is a web/app which will help the user to enhance his knowledge through 
 * It would provide a system having a **series of tests** which would **keep track of all the missed tests and calculate the score**.
 
 The Testing facility would look something like this : 
-![Click Here to see the Mock Test Home Page](https://i.imgur.com/yjhh3WQ.jpg)
-![Click here to see the Demo Question](https://i.imgur.com/xaULdAS.jpg)
+![Click Here to see the Mock Test Home Page](https://i.imgur.com/yjhh3WQ.jpg) ![Click here to see the Demo Question](https://i.imgur.com/xaULdAS.jpg)
 
 #### Personalized content for the student
 * Personalized **login account** for each user with a **unique username and and password** saved in the real-time database.

@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/mycss.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -215,7 +216,9 @@
 									<li><input type = "reset" value="Refresh" /></li>
 								</ul>
 							</form>
+
 							<h2 style = "margin-top: 20px; text-decoration: underline;">Developers</h2>
+
 							<br>
 						<ul class="contact">
 								<a href = "https://github.com/HimeshNayak"><li class="icon solid fa-user"><h3>Himesh Nayak, USICT</h3></li></a>
@@ -232,6 +235,23 @@
 						</div>
 					</section>
 
+					<div id="chat">
+						<h1 id="on-chatbox">💡 Help</h1>
+					</div>
+					<div id="chatbox" class="hidden">
+						<!-- head -->
+						<header>
+							<h3>help</h3>
+						</header>
+						<!-- body -->
+						<div id="chatBody">
+						</div>
+						<!-- text -->
+						<div id="chatInput">
+							<input type="text" id="userChat" placeholder="Enter a message">
+							<button id="userChat-button">SEND</button>
+						</div>
+					</div>
 			</div>
 
 		<!-- Scripts -->
@@ -252,5 +272,6 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/index.js"></script>
+			<script src="assets/js/myjs.js"></script>
 	</body>
 </html>

@@ -4,7 +4,6 @@
 		<title>Chanakya : E-Learning Web/App</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -25,20 +24,15 @@
 										<a href="#two">Class 11th</a>
 										<a href="#three">Class 12th</a>
 										<form>
-										<input type = "text" name = "otherCourse" placeholder = "Any other course?" id = "otherCourse" style = "color:#fff; border:2px solid; border-radius: 50px; width: 75%; margin: 0 auto;"/>
+										<input type = "text" name = "otherCourse" placeholder = "Any other course?" id = "otherCourse" style = "color:#fff; border:2px solid; border-radius: 50px;"/>
 										<a onclick = "otherCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-search"></i></a>
 										<a onclick = "resetCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-recycle"></i></a>
 										<form>
 									</div>
 								</div>
 							</a>
-							<button id="login" type="button" data-toggle="modal" data-target="#myModal">
-								Login
-  							</button>
-							<button style="display: none;" id="username" type="button" data-toggle="modal" data-target="#user">
-								Logged In
-  							</button>
-							<a href="#menu">Menu</a>													
+							<a onclick="on()" id = "username">Login</a>
+							<a href="#menu">Menu</a>
 						</nav>
 					</header>	
 
@@ -53,80 +47,65 @@
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
-					</nav>		
-								
+					</nav>
+
 				<!-- Login -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="login-inner inner modal-content">
-						<button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h2>Login</h2>									
-						<div class="modal-body" style="display: flex; flex-direction: column;">
-								<input type="email" placeholder = "Email Id" id = "user_email_id"/>
-								<input type="password" placeholder = "password" id = "user_password"/>
-								<h3 onclick="login()" data-dismiss="modal" style="margin: 10px auto;">Login</h3>
-							<h3>Don't have an account?  <span type="button" data-dismiss="modal" data-toggle="modal" data-target="#signUp">Sign Up</span></h3>
-						</div>									
-					</div>
+				<div id="loginOverlay">
+					<div id = "text">
+						<h2>Login</h2>
+						<input type="email" placeholder = "Email Id" id = "user_email_id"/>
+						<input type="password" placeholder = "password" id = "user_password"/>
+						<br>
+						<h3 onclick="login()">Login</h3>
+						<br><br>
+						<h3>Don't have an account?</h3>
+						<h3 onclick="signUp()">Sign Up</h3>
+						<br>
+						<h4 onclick = "off()">Close</h4>
 					</div>
 				</div>
 
 				<!-- User Logged in -->
-				<div class="modal fade" id="user" tabindex="-1" role="dialog" aria-labelledby="userTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="login-inner inner modal-content">
-						<button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h2>Sign Up</h2>									
-						<div class="modal-body" style="display: flex; flex-direction: column;">
-							<div id = "text">
-								<h3 onclick="gotoProfile()">My Courses</h3>
-								<br><br>
-								<h3 onClick = "gotoMock()">Mock Test</h3>
-								<br><br>
-								<h3 data-dismiss="modal" onclick="logout()">Logout</h3>
-								<br><br>
-								<h3 onclick = "off()">Close</h3>
-							</div>					
-						</div>									
+				<div id="userOverlay">
+					<div id = "text">
+						<h3 onclick="gotoProfile()">My Courses</h3>
+						<br><br>
+						<h3 onClick = "gotoMock()">Mock Test</h3>
+						<br><br>
+						<h3 onclick="logout()">Logout</h3>
+						<br><br>
+						<h3 onclick = "off()">Close</h3>
 					</div>
-					</div>
-				</div>					
+				</div>
 
-				<!-- Signup -->
-				<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpTitle" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="login-inner inner modal-content">
-						<button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h2>Sign Up</h2>									
-						<div class="modal-body" style="display: flex; flex-direction: column;">
-							<form onsubmit="signIn()">
-								<input type="text" placeholder ="Enter name" id = "S_enterName"></input>
-								<input type="email" placeholder ="Enter Email" id = "S_enterEmail"></input>
-								<input type="password" placeholder ="Enter Passsword" id = "S_enterPassword"></input>
-								<input type="text" placeholder ="Enter Class" id = "S_enterClass"></input>
-								<h3 data-dismiss="modal" type="submit" style="margin: 10px auto;">Sign Up</h3>
-							</form>							
-						</div>									
+				<!-- Signin -->
+				<div id="signinOverlay">
+					<div id = "text">
+						<h2>Sign In</h2>
+						<input type="text" placeholder ="Enter name" id = "S_enterName"></input>
+						<input type="email" placeholder ="Enter Email" id = "S_enterEmail"></input>
+						<input type="password" placeholder ="Enter Passsword" id = "S_enterPassword"></input>
+						<input type="text" placeholder ="Enter Class" id = "S_enterClass"></input>
+						<h3 onclick="signIn()">Sign Up</h3>
+						<br><br>
+						<h4 onclick = "off()">Close</h4>
 					</div>
-					</div>
-				</div>				
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>CHANAKYA</h2>
-							<p>LEARN AT HOME- THE FUTURE LEARNING PLATFORM FOR THIS WORLD</p>
-						</div>
-					</section>
-
+                </div>
+                
 				<!-- Wrapper -->
 					<section id="wrapper">
+
+                        <!-- Courses -->
+							<section id="myCourses" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a class="image"><img src="images/pic02.jpg" alt="SCIENCE COURSES FOR CLASS 11" /></a>
+									<div class="content">
+										<h2 class="major">SCIENCE COURSES FOR CLASS 11</h2>
+										<p>Stuck with lots of work from schools. We here will help you to learn with fun and great videos so that you can accomplish your task with ease. 11th class is the best confidence booster, so don't lose it but gain it with us. Join the course now!</p>
+										<a onclick="on()" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
 
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
@@ -135,7 +114,7 @@
 									<div class="content">
 										<h2 class="major">COURSES FOR JEE</h2>
 										<p>JEE is the India's largest engineering entarance examination. Learn and grow with us to win the race and get admission in your dream colleges via greatest learning videos all across the world.</p>
-										<a onclick="on()" class="special">Learn more</a>
+										<a oncick="on()" class="special">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -174,21 +153,25 @@
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="TOPIC WISE VIDEO LECTURES" /></a>
 											<h3 class="major">TOPIC WISE VIDEO LECTURES</h3>
 											<p>We provide you with the finest video lectures from the best teachers on just one click. So, what are you waiting for. Start early to raise the bar.</p>
+											<a onclick="on()" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic05.jpg" alt="TEST YOURSELF WITH OUR MOCK TESTS" /></a>
 											<h3 class="major">TEST YOURSELF WITH OUR MOCK TESTS</h3>
 											<p>We wprovide you with the exact same environment to give tests as the original paper. You will be timed and level of paper will be almost same as the paper you are going to attempt. More mock tests means less stress during exams.</p>
+											<a onclick="on()" class="special">Learn more</a>
 										</article>
 										<article>
 											<a class="image"><img src="images/pic06.jpg" alt="PERFORMANCE ANALYSIS AND PERSONALISED DATA FOR STUDENTS" /></a>
 											<h3 class="major">PERFORMANCE ANALYSIS AND PERSONALISED DATA FOR STUDENTS</h3>
 											<p>Only giving the tests don't improve your score but analysis and solutions do. We will tell you your weak points, suggest topics and help you to improve. Other data such as syllabus remaining, important topics, last minute strategies will also be provided.</p>
+											<a onclick="on()" class="special">Learn more</a>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="images/pic07.jpg" alt="REMOTE ACCESS AND ECONOMICAL PROVISIONS" /></a>
 											<h3 class="major">REMOTE ACCESS AND ECONOMICAL PROVISIONS</h3>
 											<p>To learn here, you only need a smart device with a baisic internet connection. Thus, Chanakya reaches out to all the remote areas where other offline institutes don't have access/branches. We also provide economical provisions to provide you with even cheaper education. Therefore, there is no reason to leave such an awesome platform. Let's get started together to gain an upper hand over the rest.</p>
+											<a onclick="on()" class="special">Learn more</a>
 										</article>
 									</section>
 									<ul class="actions">
@@ -202,42 +185,10 @@
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Contact Us</h2>
-							<p>You can contact us for any query, suggestions, personal questions etc. to feel more comfortable joining us. After all you have got to be with us for 2 years and have full right to ask any desired questions.</p>
-							<form>
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="message_name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="message_email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message_message" rows="4"></textarea>
-									</div>
-								</div>
-								<br>
-								<ul class="actions">
-									<li><input type = "button" onclick = "sendMessage()" value="Send Message" /></li>
-									<li><input type = "reset" value="Refresh" /></li>
-								</ul>
-							</form>
-							<h2 style = "text-decoration: underline;">Developers</h2>
-							<br>
-						<ul class="contact">
-								<a href = "https://github.com/HimeshNayak"><li class="icon solid fa-user"><h3>Himesh Nayak, USICT</h3></li></a>
-								<br>
-								<a href = "https://github.com/pscoder10462"><li class="icon solid fa-user"><h3>Parv Sharma, USICT</h3></li></a>
-								<br>
-								<a href = "https://github.com/Kashishjain04"><li class="icon solid fa-user"><h3>Kashish Jain, USICT</h3></li></a>
-							</ul>
 							<ul class="copyright">
-								<li>&copy; Debuggers</li>
+								<li>&copy; Debuggers: Debugging Society </li>
 								<li>All rights reserved.</li>
-								<li>Design: Solid-State by html5up.net</li>
+								<li>Design: Debuggers</li>
 							</ul>
 						</div>
 					</section>
@@ -249,8 +200,6 @@
 
 			<!-- TODO: Add SDKs for Firebase products that you want to use
 				https://firebase.google.com/docs/web/setup#available-libraries -->
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 			<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>

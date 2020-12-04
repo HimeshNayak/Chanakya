@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Chanakya : E-Learning Web/App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<nav style = "margin-top:0;">					
+							<a> 
+								<div class="dropdown">
+									<button>Select the course</button>
+									<div class="dropdown-content">
+										<a href="#one">JEE</a>
+										<a href="#two">Class 11th</a>
+										<a href="#three">Class 12th</a>
+										<form>
+										<input type = "text" name = "otherCourse" placeholder = "Any other course?" id = "otherCourse" style = "color:#fff; border:2px solid; border-radius: 50px;"/>
+										<a onclick = "otherCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-search"></i></a>
+										<a onclick = "resetCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-recycle"></i></a>
+										<form>
+									</div>
+								</div>
+							</a>
+							<a onclick="on()" id = "username">Login</a>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>	
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="#four">Features</a></li>
+								<li><a href="#footer">Contact Us</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Login -->
+				<div id="loginOverlay">
+					<div id = "text">
+						<h2>Login</h2>
+						<input type="email" placeholder = "Email Id" id = "user_email_id"/>
+						<input type="password" placeholder = "password" id = "user_password"/>
+						<br>
+						<h3 onclick="login()">Login</h3>
+						<br><br>
+						<h3>Don't have an account?</h3>
+						<h3 onclick="signUp()">Sign Up</h3>
+						<br>
+						<h4 onclick = "off()">Close</h4>
+					</div>
+				</div>
+
+				<!-- User Logged in -->
+				<div id="userOverlay">
+					<div id = "text">
+						<h3 onclick="gotoProfile()">My Courses</h3>
+						<br><br>
+						<h3 onClick = "gotoMock()">Mock Test</h3>
+						<br><br>
+						<h3 onclick="logout()">Logout</h3>
+						<br><br>
+						<h3 onclick = "off()">Close</h3>
+					</div>
+				</div>
+
+				<!-- Signin -->
+				<div id="signinOverlay">
+					<div id = "text">
+						<h2>Sign In</h2>
+						<input type="text" placeholder ="Enter name" id = "S_enterName"></input>
+						<input type="email" placeholder ="Enter Email" id = "S_enterEmail"></input>
+						<input type="password" placeholder ="Enter Passsword" id = "S_enterPassword"></input>
+						<input type="text" placeholder ="Enter Class" id = "S_enterClass"></input>
+						<h3 onclick="signIn()">Sign Up</h3>
+						<br><br>
+						<h4 onclick = "off()">Close</h4>
+					</div>
+                </div>
+                
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+                        <!-- Courses -->
+							<section id="myCourses" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a class="image"><img src="images/pic02.jpg" alt="SCIENCE COURSES FOR CLASS 11" /></a>
+									<div class="content">
+										<h2 class="major">SCIENCE COURSES FOR CLASS 11</h2>
+										<p>Stuck with lots of work from schools. We here will help you to learn with fun and great videos so that you can accomplish your task with ease. 11th class is the best confidence booster, so don't lose it but gain it with us. Join the course now!</p>
+										<a onclick="on()" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a class="image"><img src="images/pic01.jpg" alt="COURSES FOR JEE" /></a>
+									<div class="content">
+										<h2 class="major">COURSES FOR JEE</h2>
+										<p>JEE is the India's largest engineering entarance examination. Learn and grow with us to win the race and get admission in your dream colleges via greatest learning videos all across the world.</p>
+										<a oncick="on()" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a class="image"><img src="images/pic02.jpg" alt="SCIENCE COURSES FOR CLASS 11" /></a>
+									<div class="content">
+										<h2 class="major">SCIENCE COURSES FOR CLASS 11</h2>
+										<p>Stuck with lots of work from schools. We here will help you to learn with fun and great videos so that you can accomplish your task with ease. 11th class is the best confidence booster, so don't lose it but gain it with us. Join the course now!</p>
+										<a onclick="on()" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a class="image"><img src="images/pic03.jpg" alt="PCM FOR CLASS 12" /></a>
+									<div class="content">
+										<h2 class="major">PCM FOR CLASS 12</h2>
+										<p>Class 12 is the carrier deciding class. It will decide whether you willl take admission in your dream college or will compromise with the first step of your dreams. Why not nail it then. We will help you to do so with cool learning. .Join the course now!</p>
+										<a onclick="on()" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">WE AT CHANAKYA PROVIDE YOU WITH...</h2>
+									<p>CHANAKYA is the future learning platform of the world. Everyone learns and grows together with us. Our team has designd this website especially for science students so that they can gain all facilities required to nail it and achiecve their dreamss</p>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="TOPIC WISE VIDEO LECTURES" /></a>
+											<h3 class="major">TOPIC WISE VIDEO LECTURES</h3>
+											<p>We provide you with the finest video lectures from the best teachers on just one click. So, what are you waiting for. Start early to raise the bar.</p>
+											<a onclick="on()" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="TEST YOURSELF WITH OUR MOCK TESTS" /></a>
+											<h3 class="major">TEST YOURSELF WITH OUR MOCK TESTS</h3>
+											<p>We wprovide you with the exact same environment to give tests as the original paper. You will be timed and level of paper will be almost same as the paper you are going to attempt. More mock tests means less stress during exams.</p>
+											<a onclick="on()" class="special">Learn more</a>
+										</article>
+										<article>
+											<a class="image"><img src="images/pic06.jpg" alt="PERFORMANCE ANALYSIS AND PERSONALISED DATA FOR STUDENTS" /></a>
+											<h3 class="major">PERFORMANCE ANALYSIS AND PERSONALISED DATA FOR STUDENTS</h3>
+											<p>Only giving the tests don't improve your score but analysis and solutions do. We will tell you your weak points, suggest topics and help you to improve. Other data such as syllabus remaining, important topics, last minute strategies will also be provided.</p>
+											<a onclick="on()" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="REMOTE ACCESS AND ECONOMICAL PROVISIONS" /></a>
+											<h3 class="major">REMOTE ACCESS AND ECONOMICAL PROVISIONS</h3>
+											<p>To learn here, you only need a smart device with a baisic internet connection. Thus, Chanakya reaches out to all the remote areas where other offline institutes don't have access/branches. We also provide economical provisions to provide you with even cheaper education. Therefore, there is no reason to leave such an awesome platform. Let's get started together to gain an upper hand over the rest.</p>
+											<a onclick="on()" class="special">Learn more</a>
+										</article>
+									</section>
+									<ul class="actions">
+										<li><a href="#four" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Debuggers: Debugging Society </li>
+								<li>All rights reserved.</li>
+								<li>Design: Debuggers</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+			<!-- TODO: Add SDKs for Firebase products that you want to use
+				https://firebase.google.com/docs/web/setup#available-libraries -->
+			<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/index.js"></script>
+	</body>
+</html>

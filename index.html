@@ -17,13 +17,12 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<nav style = "margin-top:0;">					
-							<a> 
 								<div class="dropdown">
 									<button>Select the course</button>
 									<div class="dropdown-content">
-										<a href="#one">JEE</a>
-										<a href="#two">Class 11th</a>
-										<a href="#three">Class 12th</a>
+										<a style="display: block;" href="#one">JEE</a>
+										<a style="display: block;" href="#two">Class 11th</a>
+										<a style="display: block;" href="#three">Class 12th</a>
 										<form>
 										<input type = "text" name = "otherCourse" placeholder = "Any other course?" id = "otherCourse" style = "color:#fff; border:2px solid; border-radius: 50px; width: 75%; margin: 0 auto;"/>
 										<a onclick = "otherCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-search"></i></a>
@@ -31,7 +30,6 @@
 										<form>
 									</div>
 								</div>
-							</a>
 							<button id="login" type="button" data-toggle="modal" data-target="#myModal">
 								Login
   							</button>
@@ -59,14 +57,12 @@
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="login-inner inner modal-content">
-						<button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+						<a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
 						<h2>Login</h2>									
 						<div class="modal-body" style="display: flex; flex-direction: column;">
 								<input type="email" placeholder = "Email Id" id = "user_email_id"/>
 								<input type="password" placeholder = "password" id = "user_password"/>
-								<h3 onclick="login()" data-dismiss="modal" style="margin: 10px auto;">Login</h3>
+								<h3 type="button" onclick="login()" data-dismiss="modal" style="margin: 10px auto;">Login</h3>
 							<h3>Don't have an account?  <span type="button" data-dismiss="modal" data-toggle="modal" data-target="#signUp">Sign Up</span></h3>
 						</div>									
 					</div>
@@ -76,10 +72,8 @@
 				<!-- User Logged in -->
 				<div class="modal fade" id="user" tabindex="-1" role="dialog" aria-labelledby="userTitle" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="login-inner inner modal-content">
-						<button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+					<div class="login-inner inner modal-content">						
+						<a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
 						<h2>Sign Up</h2>									
 						<div class="modal-body" style="display: flex; flex-direction: column;">
 							<div id = "text">
@@ -87,9 +81,7 @@
 								<br><br>
 								<h3 onClick = "gotoMock()">Mock Test</h3>
 								<br><br>
-								<h3 data-dismiss="modal" onclick="logout()">Logout</h3>
-								<br><br>
-								<h3 onclick = "off()">Close</h3>
+								<h3 data-dismiss="modal" onclick="logout()">Logout</h3>								
 							</div>					
 						</div>									
 					</div>
@@ -100,9 +92,7 @@
 				<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpTitle" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="login-inner inner modal-content">
-						<button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+						<a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
 						<h2>Sign Up</h2>									
 						<div class="modal-body" style="display: flex; flex-direction: column;">
 							<form onsubmit="signIn()">
@@ -225,7 +215,7 @@
 									<li><input type = "reset" value="Refresh" /></li>
 								</ul>
 							</form>
-							<h2 style = "text-decoration: underline;">Developers</h2>
+							<h2 style = "margin-top: 20px; text-decoration: underline;">Developers</h2>
 							<br>
 						<ul class="contact">
 								<a href = "https://github.com/HimeshNayak"><li class="icon solid fa-user"><h3>Himesh Nayak, USICT</h3></li></a>

@@ -74,8 +74,7 @@
 				<div class="modal fade" id="user" tabindex="-1" role="dialog" aria-labelledby="userTitle" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 					<div class="login-inner inner modal-content">						
-						<a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
-						<h2>Sign Up</h2>									
+						<a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>						
 						<div class="modal-body" style="display: flex; flex-direction: column;">
 							<div id = "text">
 								<h3 onclick="gotoProfile()">My Courses</h3>
@@ -96,13 +95,11 @@
 						<a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
 						<h2>Sign Up</h2>									
 						<div class="modal-body" style="display: flex; flex-direction: column;">
-							<form onsubmit="signIn()">
 								<input type="text" placeholder ="Enter name" id = "S_enterName"></input>
 								<input type="email" placeholder ="Enter Email" id = "S_enterEmail"></input>
 								<input type="password" placeholder ="Enter Passsword" id = "S_enterPassword"></input>
 								<input type="text" placeholder ="Enter Class" id = "S_enterClass"></input>
-								<h3 data-dismiss="modal" type="submit" style="margin: 10px auto;">Sign Up</h3>
-							</form>							
+								<h3 onclick="signIn()" data-dismiss="modal" type="submit" style="margin: 10px auto;">Sign Up</h3>						
 						</div>									
 					</div>
 					</div>

@@ -14,27 +14,30 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
-						<nav style = "margin-top:0;">					
-							<a> 
-								<div class="dropdown">
-									<button>Select the course</button>
-									<div class="dropdown-content">
-										<a href="#one">JEE</a>
-										<a href="#two">Class 11th</a>
-										<a href="#three">Class 12th</a>
-										<form>
-										<input type = "text" name = "otherCourse" placeholder = "Any other course?" id = "otherCourse" style = "color:#fff; border:2px solid; border-radius: 50px;"/>
-										<a onclick = "otherCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-search"></i></a>
-										<a onclick = "resetCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-recycle"></i></a>
-										<form>
-									</div>
+				<header id="header" class="alt">
+					<nav style = "margin-top:0;">					
+							<div class="dropdown">
+								<button>Select the course</button>
+								<div class="dropdown-content">
+									<a style="display: block;" href="#one">JEE</a>
+									<a style="display: block;" href="#two">Class 11th</a>
+									<a style="display: block;" href="#three">Class 12th</a>
+									<form>
+									<input type = "text" name = "otherCourse" placeholder = "Any other course?" id = "otherCourse" style = "color:#fff; border:2px solid; border-radius: 50px; width: 75%; margin: 0 auto;"/>
+									<a onclick = "otherCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-search"></i></a>
+									<a onclick = "resetCourse()" style = "border:2px; border-radius: 50px;"><i class = "fa fa-recycle"></i></a>
+									<form>
 								</div>
-							</a>
-							<a onclick="on()" id = "username">Login</a>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>	
+							</div>
+						<button id="login" type="button" data-toggle="modal" data-target="#myModal">
+							Login
+							</button>
+						<button style="display: none;" id="username" type="button" data-toggle="modal" data-target="#user">
+							Logged In
+							</button>
+						<a href="#menu">Menu</a>													
+					</nav>
+				</header>	
 
 				<!-- Menu -->
 					<nav id="menu">

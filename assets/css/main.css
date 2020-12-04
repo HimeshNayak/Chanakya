@@ -3429,7 +3429,7 @@ button:disabled,
   text-align: center;
 }
 
-#menu .close {
+.close {
   background-image: url("images/close.svg");
   background-position: 75% 25%;
   background-repeat: no-repeat;
@@ -3481,7 +3481,7 @@ button:disabled,
     overflow-x: hidden;
   }
 
-  #menu .inner .close {
+  .close {
     background-size: 1.5em 1.5em;
   }
 }

@@ -238,9 +238,12 @@ function sendMessage() {
 
 function otherCourse() {
   var course = document.getElementById("otherCourse").value;
-  location.replace(
+  window.open(
     "https://www.youtube.com/results?search_query=" + course + "&sp=CAESAhAC"
   );
+  //   location.replace(
+  //     "https://www.youtube.com/results?search_query=" + course + "&sp=CAESAhAC"
+  //   );
   document.getElementById("otherCourse").value = "";
 }
 

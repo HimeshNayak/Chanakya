@@ -76,3 +76,7 @@ button:focus {
   padding-left: 2px;
   padding-right: 2px;
 }
+
+#text h3 {
+  cursor: pointer;
+}

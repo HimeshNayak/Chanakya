@@ -84,6 +84,7 @@ var currentUser = "No User Now";
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
+    console.log(user);
     // User is signed in.
     off();
     document.getElementById("login").style.display = "none";
@@ -129,6 +130,7 @@ function logout() {
       // An error happened.
       alert("Error!!!" + error);
     });
+  location.replace(location.origin + "/index.html");
 }
 
 //SignUP
